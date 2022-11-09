@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casacading</title>
+    <!----Selector {
+        property : value;
+    }-->
+    <style>
+        
+        h1,h2{ 
+            color: red;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+        .ClassSelector{
+            color: green;
+            font-size: 75px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: underline;
+        }
+        #header{
+            color: gold;
+            font-size: 75px;
+        }
+        h3{
+            color: royalblue;
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--h1,h2 have same property so we grouped together-->
+    <!---reusability -->
+    <h1>Casacading Style Sheet </h1>
+    <h2>Grouping selection</h2>
+    <h1 class="ClassSelector ">Class Selector </h1>
+
+    <h1 class="ClassSelector ">Class Selector </h1> <!----Change color-->
+    <h1>Class Selector </h1> <!----Change color-->
+    <h1>Class Selector </h1> <!----Change color-->
+    <!---Preority  -->
+
+    <h3  class="ClassSelector " id="header">Id Selector</h3>
+
+    <!---<h2>Casacading Style Sheet </h2> Css - size :200px - lowercase
+    <h3>Casacading Style Sheet </h3> Css - color  - lowercase--->
+    <!---diff Selector{
+        1.Element Selector in element selector have only one 
+        2.Grouping Selector ---in grouped selector have one are more
+        3.Class Selector ---in class selector 
+        4.Id Selector
+    }-->
+
+</body>
+</html>
