@@ -1,0 +1,41 @@
+/*Descresent Selector */
+div p{
+    color: green;
+}
+/*Child selector*/
+div > p{
+    color: red;
+}
+/* Adjucent Sibling Selector  */
+div +p{
+    color: blue;
+}
+/* General Sibling Selector */
+div ~ p{
+    color: rgb(141, 61, 141);
+    
+}
+/* color property */
+
+/* position 
+    top, right, left */
+
+.static{
+    position: static;
+    left: 100px;
+    
+}
+.relative{
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+.absolute{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
+.topleft{
+    top: 200px;
+    
+}

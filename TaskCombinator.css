@@ -1,0 +1,61 @@
+.topleft{
+    font-size: larger;
+    color: blueviolet;
+    position: absolute;
+}
+.middleleft {
+    font-size: larger;
+    color: blue;
+    position: absolute;
+    top: 600px;
+}
+.bottomleft {
+    font-size: larger;
+    color: brown;
+    position: absolute;
+    top: 800px;
+
+}
+.topcenter{
+    font-size: larger;
+    color: red;
+    position: absolute;
+    left: 350px;
+}
+.middlecenter{
+    font-size: larger;
+    color: blanchedalmond;
+    position: absolute;
+    left: 350px;
+    top: 600px;
+}
+.bottomcenter{
+    font-size: larger;
+    color: wheat;
+    position: absolute;
+    top: 800pxpx;
+    left: 600px;
+}
+.topright{
+    font-size: larger;
+    color: white;
+    position: absolute;
+    left: 700px;
+
+}
+.middleright{ 
+    font-size: larger;
+    color: whitesmoke;
+    position: absolute;
+    left: 750px;
+    top: 600px;
+
+}
+.bottomright{
+    font-size: larger;
+    color: white;
+    position: absolute;
+    top: 800px;
+    left: 700px;
+
+}
