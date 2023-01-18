@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayImage(){
+            let image = document.createElement("img")
+            image.src= "tour-1.jpeg"
+            image.src= "tour-2.jpeg"
+            //image.src= "C:\\Users\\admin\\OneDrive\\Desktop\\Xworkz\\WEB-Technology\\tour-5.jpeg"
+            document.body.appendChild(image)
+            image.style.height= "420px"
+            image.style.width = "500px"
+            let Loadimage = document.getElementById("Loadimage")
+            Loadimage.appendChild(image)
+            
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="displayImage()">Display image</button>
+    <div id="Loadimage"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       function validate(){
+         console.log("calling validate")
+         let firstName = document.getElementById("firstName")
+         console.log(firstName.value)
+         console.log(firstName.value.length)
+
+         let email = document.getElementById("email")
+         console.log(email.value)
+
+         if(firstName.value == "" ){
+            console.log("please enter firstName")
+            let message = document.getElementById("firstNameMessage")
+            message.innerHTML = "please enter first name"
+            message.style.color = "red"
+         }
+         if(firstName.value.length == "0"){
+            console.log("Please enter first name")
+         }
+
+         let password = document.getElementById("password")
+         console.log(password.value)
+         console.log(password.value.length)
+
+         if(password.value.length == 0){
+            console.log("please enter password")
+            let passwordMessage = document.getElementById("passwordMessage")
+            passwordMessage.innerHTML = "please enter password"
+            passwordMessage.style.color = "red"
+         }
+
+         else if(password.value.length < 4 ){
+            console.log("password is weak")
+            let message1 = document.getElementById("passwordMessage")
+            message1.innerHTML = "password is weak"
+            message1.style.color = "blue"
+             
+         }
+       
+        else if(password.value.length > 8) {
+         console.log("password to long")
+         let message2 = document.getElementById("passwordMessage")
+         message2.innerHTML = "password is to long"
+         message2.style.color = "green"
+        }
+
+        console.log(document.registration.gender)
+        console.log(document.registration.gender[0])
+        console.log(document.registration.gender[0].checked)
+        console.log(document.registration.gender[1].checked)
+        console.log(document.registration.gender[2].checked)
+
+        if(document.registration.gender[0].checked == false && 
+        document.registration.gender[1].checked == false && document.registration.gender[2].checked == false){
+         console.log("please select gender")
+         let genderMessage = document.getElementById("genderMesssage")
+         genderMessage.innerHTML = "please select gender"
+         genderMessage.style.color = 'red'
+        }
+        let genderData
+        if(document.registration.gender[0].checked == true){
+         genderData = document.registration.gender[0].value
+        }
+        else if(document.registration.gender[1].checked == true){
+         genderData = document.registration.gender[1].value
+        }
+        else if(document.registration.gender[2].checked == true){
+         genderData = document.registration.gender[2].value
+        }
+        
+        console.log(document.registration.city)
+        let city = document.registration.city
+        if(city.value == "0"){
+         console.log("please select city")
+         let cityMessage = document.getElementById("cityMessage")
+         cityMessage.innerHTML = "please select city"
+         cityMessage.style.color = 'red'
+        }
+
+        let registration = {
+         'firstName' : firstName.value,
+         'email' : email.value,
+         'password' : password.value,
+         'gender' : genderData,
+         'city' : city.value
+        }
+        console.log(registration)
+        console.log(JSON.stringify(registration))
+        let registrationString = JSON.stringify(registration)
+
+        localStorage.setItem("noncsr", registrationString)
+        
+    }
+
+    //create image dynamically
+    
+        
+
+        
+         
+    </script>
+</head>
+<body>
+     <form name = "registration">
+        <div>
+            <label> Enter First name </label>
+            <input type = "text" name = "firstName" id = "firstName">
+            <span id = "firstNameMessage"> </span>
+         </div>
+
+         <div>
+            <label> Enter Email</label>
+            <input type = "text" name = "email" id = "email">
+            <span id = "emailMessage"> </span>
+         </div>
+
+         <div>
+            <label> Enter password </label>
+            <input type = "password" name = "password" id = password>
+            <span id = "passwordMessage"> </span>
+         </div>
+
+         <div>
+            <label> Select gender </label>
+            <input type = "radio" name = "gender" value = "m"> Male
+            <input type = "radio" name = "gender" value = "f" > Female
+            <input type = "radio" name = "gender" value = "o"> Others
+            <span id = "genderMesssage"> </span>
+         </div>
+
+         <div>
+            <label> Select city </label>
+            <select name = "city" id = "city">
+               <option value = "0"> -- Select city --</option>
+               <option> Bagalkot </option>
+               <option> Banglore </option>
+               <option> Mysore</option>
+            </select>
+            <span id = "cityMessage"> </span>
+         </div>
+
+            
+        
+        <button type = "button" onclick = "validate()"> Register </button>
+        
+     </form>
+
+     
+</body>
+</html>

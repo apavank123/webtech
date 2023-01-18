@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            console.log("calling validate")
+            let firstName = document.getElementById("firstName")
+            console.log(firstName.value.length)
+            if(firstName.value == ""){
+                console.log("please enter name")
+                let message = document.getElementById("message")
+                message.innerHTML = "please enter name"
+            }
+            if(firstName.value.length == "0"){
+                console.log("please enetr name")
+                style.color="red"
+            }
+        }
+        function validates(){
+            console.log("calling validates")
+            let pasword = document.getElementById("pasword")
+            console.log(pasword.value.length)
+            if(pasword.value.length < "8"){
+                console.log("password is not strong")
+                let pasword = document.getElementById("pass")
+                pass.innerHTML = "password is not strong"
+                pass.style.color = 'red'
+            }
+            else if (pasword.value.length > "8"){
+                console.log("password is strong")
+                let pasword = document.getElementById("pass")
+                pass.innerHTML = "password is strong"
+                pass.style.color = 'green'
+
+            }
+           console.log(document.registertion.gender)
+           console.log(document.registertion.gender[0])
+           console.log(document.registertion.gender[0].checked)
+           if(document.registertion.gender[0].checked==false&&document.registertion.gender[1].checked==false&&document.registertion.gender[2].checked==false){
+           console.log("please enter gender")
+           let genderMessage = document.getElementById("genderMessage")
+           genderMessage.innerHTML = "please enter the gender"
+           }
+           console.log(document.registertion.city)
+           console.log(document.registertion.city.value)
+           if(document.registertion.city.value =="0"){
+
+           let cityName = document.getElementById("cityName")
+           cityName.innerHTML = "please enter city"
+           }
+        }
+        /*
+        //how html page is loaded in browser 
+        //Browser will have an engine called browserengine 
+        Browser engine wiil be responsible to render the web page Browserengine will platform 2 steps 
+        to load the html page 
+        1. It reads the html files and create an object for each html tag 
+        2. Object are linked to form a tree. this tree is called as DOM 
+
+
+        DOM - It is used to access and manipulate html Element
+        Access - document.getElementId
+        Manipulate/ Modify - innerHTML 
+
+        //create image dynamically
+        */
+
+
+
+
+    </script>
+</head>
+<body>
+    <form name="registertion">
+        <div>
+            <label>enter the name</label>
+            <input type="text" id="firstName">
+            <span id="message"></span>
+        </div>
+        <button type="button" onclick="validate()">register</button>
+        <br>
+        <div>
+        <label>enter password</label>
+        <input type="password" id="pasword">
+        <span id="pass"></span>
+        </div>
+        <div>
+            <label>enter gender</label>
+            <input type="radio" name="gender" > male
+            <input type="radio" name="gender"> female
+            <input type="radio" name="gender"> others
+            <br>
+            <span id="genderMessage"></span>
+        </div>
+        <div>
+            <label>Select the city</label>
+            <select name="city">
+                <option value="0">Select City</option>
+                <option value="1">Bangalore</option>
+                <option value="2">Mysore</option>
+                <option value="3">bagalkot</option>
+            </select>
+            <span id="cityName"></span>
+        </div>
+        <button type="button" onclick="validates()">register</button>
+    </form>
+
+    <!----->
+    
+</body>
+</html>

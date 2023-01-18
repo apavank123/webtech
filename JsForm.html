@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        function validate() {
+            console.log("calling validate")
+            let firstName = document.getElementById("firstName")
+            console.log(firstName.value)
+            console.log(firstName.value.length)
+            if(firstName.value == ""){
+                console.log("Please Enter the Firstname")
+                document.getElementById("firstNamemessage")
+                message.innerHTML= "Please Enter the Firstname"
+            }
+            if(firstName.value.length=="0"){
+                console.log("Please Enter First Name")
+            }
+        
+        function validate1() {
+            console.log("calling validate1")
+            let firstName = document.getElementById("password")
+            console.log(password.value.length)
+            if(password.value < "8"){
+                console.log("Password is not Strong ")
+                document.getElementById("pass")
+                pass.innerHTML= "Password is not Strong "
+            }
+            if(firstName.value.length < "8"){
+                console.log("Please Enter password")
+                let password = document.getElementById("pass")
+                pass.innerHTML = "Please Enter the password"
+
+            }
+        
+        console.log(document.JsForm.gender)
+        console.log(document.JsForm.gender[0])
+        console.log(document.JsForm.gender[0].checked)
+        console.log(document.JsForm.gender[1].checked)
+        console.log(document.JsForm.gender[2].checked)
+        if(console.log(document.JsForm.gender[0].checked)||
+        console.log(document.JsForm.gender[1].checked)||
+        console.log(document.JsForm.gender[2].checked)){
+            console.log("Please Enter the Gender")
+            let genderMessage = document.getElementById("genderMessage")
+            genderMessage.innerHTML = "Please Select Gender"
+
+        }
+    }
+}
+
+
+
+    </script>
+</head>
+<body>
+    
+    <form name="JsForm">
+        <div id="message"> </div>
+        <div>
+            <label>Enter First Name</label>
+            <input type="text" name="firstName" id="firstName">
+        </div>
+        <div>
+            <button type="button" onclick ="validate()" >Register</button>
+        </div>
+        <div id="message"> </div>
+        <div>
+            <label>Enter the Password</label>
+            <input type="password" name="password" id="password">
+            <span id="pass"></span>
+        </div>
+        <div>
+            <button type="button" onmouseover ="validate1()" >Enter</button>
+        </div>
+        <div>
+            <label for="">Enter Gender</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+            <input type="radio" name="gender">Other
+
+        </div>
+    </form>
+
+    <!-- When user click on button, an event will be generated -->
+    <!---Types of Event-->
+
+
+</body>
+</html>

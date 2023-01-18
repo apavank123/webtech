@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function displayImage() {
+           //single image 
+           let image =  document.createElement("img")
+           image.src = "images (1).jfif"
+           image.style.width = "300px"
+           image.style.height = "200px"
+           let loadImage = document.getElementById("loadImage")
+           loadImage.appendChild(image)
+           
+          // multiple images
+          for(let i = 0; i < 10 ; i++){
+           let image =  document.createElement("img")
+           image.src = "images (1).jfif"
+           image.style.width = "300px"
+           image.style.height = "200px"
+           let loadImage = document.getElementById("loadImage")
+           loadImage.appendChild(image)
+          }
+           
+
+           //display paragraph from javascript
+           let paragraph = document.createElement("p") // add tag
+           let text = document.createTextNode("Creating paragraph dynamically") // add text
+           paragraph.appendChild(text) //add text to paragraph
+
+           console.log(paragraph)
+
+          let main =  document.getElementById("main")
+          main.appendChild(paragraph)
+
+          //div tag
+          let content = document.createElement("div")
+          let text1 = document.createTextNode("JavaScript")
+          content.appendChild(text1)
+
+          console.log(content)
+     
+           let header = document.getElementById("header")
+           header.appendChild(content)
+          
+
+
+        }
+         let tree = {}
+         //tree name, lifespan
+         //key, value pair
+
+         tree = {
+            'name' : 'Banyan',
+            'Lifespan' : 500
+         }
+         console.log(tree)
+        
+    </script>
+</head>
+<body>
+    <div id = "loadImage"> </div>
+    <button onclick = "displayImage()"> Dispaly Image</button>
+
+    <div id = "main" > </div>
+
+    <div id = "header"> </div>
+</body>
+</html>

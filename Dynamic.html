@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //05/12/22
+        console.log("Introduction to javascript:")
+        var a; //variable declaration
+        //var means variable
+        console.log(a)
+        console.log(typeof(a))
+        
+        a= "Javascript" // initialization 
+        console.log(a)
+        console.log(typeof(a))
+
+        var b;
+        b=10;
+        console.log(b)
+
+        a=10;
+        console.log(a)
+        console.log(typeof(a))
+
+        a=10.20;
+        console.log(a)
+        console.log(typeof(a))
+
+        a='j';
+        console.log(a)
+        console.log(typeof(a))
+
+        a=true
+        console.log(a)
+        console.log(typeof(a))
+
+        let c
+        console.log(c)
+
+        var a
+        console.log(a) //it's taken already initialized value
+
+        //let c //can't redeclare variable in js
+        //console.log(c)
+
+        //Datatypes -- 
+        // String, number, boolean, undefined 
+        
+        // 06/12/22
+        document.write("<h1>2nd class  Javascript(06/12) </h1>")
+        //Function functioName(){
+
+        // }
+
+        //Panda sacrifice his life for learning java
+
+        function display(){
+            console.log("Executing function in Javascript")
+        }
+        display()
+
+        display1()
+        function display1(){
+            console.log("Executing function in Javascript after initialize")
+        }
+/*
+        display2() //StackOverFlow  , outofmemory
+        function display2(){
+            console.log("Executing function in Javascript")
+            display2()
+        }
+        */
+        console.log("Introduction to javascript:")
+        document.write("Introduction to javascript:")
+        document.write("<h1>Introduction to javascript : </h1>")
+        document.write("<h2>Introduction to javascript : </h2>")
+        document.write("<h3>Introduction to javascript : </h3>")
+        document.write("<h4>Introduction to javascript : </h4>")
+        document.write("<h5>Introduction to javascript : </h5>")
+        document.write("<h6>Introduction to javascript : </h6>")
+
+        //Javascript PopupBox
+        //1.alert("Calling print statement") // means Popup Box
+        /*2.confirm("After this class are you attending presentation....")*/ 
+        /*let result = confirm("After this class what are you doing.......") 
+        console.log(result)*/ 
+
+        let result = prompt("What is your name")
+        console.log(result)
+        document.write(result)
+
+        document.write("<h1>3rd class  Javascript (07/12)</h1>")
+
+        if(result == 'Pavan'){
+            document.write('<br>')
+            document.write(result)
+        }else{
+            // Javascript
+            document.write('<br>')
+            document.write("Javascript")
+        }
+
+        //how to pass argument to function in JS
+
+        function add(a, b){
+            console.log("Calling display")
+            console.log(a+b)
+        }
+        add(20,30)
+
+        //how to return data from function in JS
+        function sub(a,b){
+            return a-b
+        }
+        let res = sub(29 ,22)
+        console.log(res)
+
+        //how to declare constant in JS
+        const pi = 3.14
+        console.log(pi)
+
+        //Print Star Pattern in JS
+        document.write('<br>')
+        for(let i=0; i<4; i++){
+            for(let j=0; j<=i; j++){
+                document.write("@")
+            }
+            document.write('<br>')
+        }
+
+        document.write('<br>')
+        for(let i=1; i<=5; i++){
+            for(let j=5; j>=i; j--){
+                document.write("@")
+            }
+            document.write('<br>')
+        }
+
+        // web, java, database
+
+        function starPattern(){
+            document.write('<br>')
+            for(let i=0; i<4; i++){
+                for(let j=0; j<=i; j++){
+                    document.write("@")
+                }
+                document.write('<br>')
+            }
+        }
+        function starPattern1(){
+            document.write('<br>')
+            for(let i=1; i<=5; i++){
+                for(let j=5; j>=i; j--){
+                    document.write("@")
+                   }
+            document.write('<br>')
+        }
+        }
+
+
+        //Event Handling 
+        //onclick
+
+    </script>
+
+    <!---recession ;
+         hiring process low,
+         prices of basic
+        , need going high, financial year Apr-Mrc
+        company losses ----->
+</head>
+<body>
+    <!--JavaSCript will Introduction to javascript-->
+
+    <button onclick="starPattern1()">Print starPattern</button>
+    <button onmouseover="starPattern()">Print starPattern</button>
+    
+
+                                                                                            
+    
+</body>
+</html>

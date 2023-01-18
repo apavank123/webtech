@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // JAVA [] = {}
+        // JAVASCRIPT [] --> Array, {}--> Object
+        // Array in JAva Script
+        //Declaring in Array
+        let arr = []
+        arr = [1,2,3]
+        console.log[arr]
+        for (let i=0; i<arr; i++ )
+        {
+            console.log(arr[i])
+        }
+        //Declaring and Initialization Array
+        let arr1 = [true, false]
+        console.arr1
+
+        let arr2 = [1, "Pavan", 10.20]
+        for(let j=0; j<arr2.length; j++){
+            console.log(arr2[j])
+        }
+
+        let arr3 = []
+        arr3.push(1) //add the element at end of array
+        console.log(arr3)
+       
+        arr3.push(2)
+        console.log(arr3)
+        arr3.push(3)
+        console.log(arr3)
+        arr3.push(4)
+        console.log(arr3)
+
+        arr3.pop() //remove element at last of array
+        console.log(arr3)
+        for(let i=0; i<arr3.length; i++){
+            console.log(arr2[i])
+        }
+
+        arr3.unshift(5)  //add the element at  beginning  of array
+        console.log(arr3)
+        arr3.unshift(6)
+        console.log(arr3)
+
+        arr3.shift()  //remove element at beginning of array
+        console.log(arr3)
+
+        let tree = {
+            'name' : 'Banyan',
+            'lifespan ' : 500
+        }
+        let trees = []
+        trees.push(tree)
+        let tree1 = {
+            'name' : 'Coconunt',
+            'lifespan ' : 100
+        }
+        trees.push(tree1)
+        console.log(trees)
+
+        console.log(arr3)
+
+        arr3.splice(1, 2)
+        console.log(arr3)
+
+        //how to create object javascript
+        //let d ={}literal way to creating object 
+
+        //Buildin Object creation
+        Employee = new Object()
+        Employee.firstName = 'Deepak'
+        console.log(Employee.firstName)
+
+        // User Defined way of creating JS
+        function Student(name, id, city){
+            this.name = name 
+            this.id = id
+            this.city = city 
+        }
+        let ram = new Student("ram", 2, "Mudhol")
+        console.log(ram.name)
+        console.log(ram.id)
+        console.log(ram.city)
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

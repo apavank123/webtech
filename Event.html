@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script>
+        function displayData(){
+            console.log("Calling displayData")
+            let message = document.getElementById("message")
+            console.log(message)
+            message.innerHTML = "Calling displayData"
+            message.style.color = "red"
+
+        }
+        function displayData1(){
+            console.log("Virat Kohli")
+            let message = document.getElementById("message")
+            console.log(message)
+            message.innerHTML = "Virat Kohli"
+            message.style.color = "red"
+        }
+        function details(){
+            console.log("Calling details")
+            let name = document.getElementById("name")
+            console.log(name)
+            console.log(name.value)
+            let details = document.getElementById("detail")
+            detail.innerHTML = name.value
+        }
+        
+
+
+    </script>
+</head>
+<body>
+    
+    <button onclick="displayData()">Click Me </button>
+    <h1>India</h1>
+    <button onclick="displayData1()">Player 1</button>
+    <div id="message"> </div>
+
+    <form>
+        <div>
+            <label for="">Enter Name</label>
+            <input type="text" id="name">
+        </div>
+        <button onmouseover="details() ">Submit</button>
+        <div id="detail"> </div>
+    </form>
+    
+    
+</body>
+</html>
